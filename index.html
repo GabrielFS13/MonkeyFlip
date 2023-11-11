@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MonkeyFlip</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer>
+
+        function start(){
+            const sound = document.querySelector("#flip_sound")
+            const image = document.querySelector("img")
+            sound.volume = 0.1
+            sound.play()
+            image.className = "flip"
+            setTimeout(()=> image.className = "", 1000 * 12)
+        }
+
+    </script>
+</head>
+<body>
+    <img src="./mamaco.png" alt="MonkeyFlip">
+    <button onclick="start()">Flip him</button>
+    <audio src="./backflip.mp3" id="flip_sound" type="audio/mpeg"></audio>
+</body>
+</html>

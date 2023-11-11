@@ -1,0 +1,42 @@
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+img{
+    width: 400px;
+}
+
+button{
+    padding: 16px;
+    border: none;
+    background-color: transparent;
+    font-size: 24px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button:hover{
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+.flip{
+    animation-name: flipMonkey;
+    animation-duration: 13s;
+}
+
+@keyframes flipMonkey {
+    0%{
+        transform: rotateX(0deg);
+    }
+    
+    100%{
+        transform: rotateX(-360deg);
+
+    }
+}
